@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.96426fdf.css",
-    "main.js": "/static/js/main.b8806898.js",
-    "static/js/453.ea205666.chunk.js": "/static/js/453.ea205666.chunk.js",
-    "index.html": "/index.html",
-    "main.96426fdf.css.map": "/static/css/main.96426fdf.css.map",
-    "main.b8806898.js.map": "/static/js/main.b8806898.js.map",
-    "453.ea205666.chunk.js.map": "/static/js/453.ea205666.chunk.js.map"
+    "main.css": "/poetsinn/static/css/main.96426fdf.css",
+    "main.js": "/poetsinn/static/js/main.daac2cd8.js",
+    "static/js/453.ea205666.chunk.js": "/poetsinn/static/js/453.ea205666.chunk.js",
+    "index.html": "/poetsinn/index.html",
+    "main.96426fdf.css.map": "/poetsinn/static/css/main.96426fdf.css.map",
+    "main.daac2cd8.js.map": "/poetsinn/static/js/main.daac2cd8.js.map",
+    "453.ea205666.chunk.js.map": "/poetsinn/static/js/453.ea205666.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.96426fdf.css",
-    "static/js/main.b8806898.js"
+    "static/js/main.daac2cd8.js"
   ]
 }
