@@ -1,0 +1,111 @@
+.video-section-split {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  padding: 160px 10%;
+  background: linear-gradient(135deg, #001c17, #012c23);
+  flex-wrap: wrap;
+}
+
+.video-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.video-main {
+  height: 720px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 32px;
+  box-shadow: 0 60px 150px rgba(0, 0, 0, 0.75);
+  object-fit: contain; /* IMPORTANT */
+  background: black;   /* prevents white edges */
+}
+
+
+/* ===================== */
+/* Controls              */
+/* ===================== */
+
+.video-controls {
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.control-btn {
+  background: var(--gold);
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.control-btn:hover {
+  background: #d4af37;
+}
+
+/* ===================== */
+/* Quote Section         */
+/* ===================== */
+
+.quote-container {
+  flex: 1;
+  max-width: 520px;
+}
+
+.quote-container h2 {
+  font-size: 48px;
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+
+.quote-text {
+  font-size: 20px;
+  font-style: italic;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.quote-sub {
+  font-size: 16px;
+  color: #bbb;
+}
+
+/* ===================== */
+/* Responsive            */
+/* ===================== */
+
+@media (max-width: 1024px) {
+  .video-section-split {
+    flex-direction: column;
+    gap: 60px;
+    padding: 120px 8%;
+  }
+
+  .video-main {
+    height: 550px;
+  }
+
+  .quote-container {
+    text-align: center;
+  }
+
+  .quote-container h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-main {
+    height: 450px;
+  }
+}

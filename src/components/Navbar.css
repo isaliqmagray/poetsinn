@@ -1,0 +1,123 @@
+/* ============================= */
+/* PREMIUM GLASS NAVBAR */
+/* ============================= */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  padding: 20px 10%;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.65);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+
+  transition: 0.4s ease;
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #d4af37;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  color: #fff;
+}
+
+/* Nav Links */
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+/* Hover underline animation */
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #d4af37;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+/* Active link */
+
+.active-link {
+  color: #d4af37 !important;
+}
+
+.active-link::after {
+  width: 100% !important;
+}
+
+/* Mobile Toggle */
+
+.mobile-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ============================= */
+/* MOBILE VERSION */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    width: 220px;
+    padding: 30px;
+    gap: 20px;
+
+    transform: translateX(100%);
+    transition: 0.4s ease;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}

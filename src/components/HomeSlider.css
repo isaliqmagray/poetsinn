@@ -1,0 +1,68 @@
+/* ===================== */
+/* HERO BACKGROUND SLIDER */
+/* ===================== */
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1.2s ease-in-out;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.75)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+  color: white;
+  animation: fadeUp 1s ease;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
