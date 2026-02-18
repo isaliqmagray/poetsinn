@@ -1,3 +1,6 @@
+import { useState } from "react";
+import Lightbox from "../components/Lightbox";
+
 function Gallery() {
   const images = [
     "/images/img_11.jpg",
@@ -32,6 +35,8 @@ function Gallery() {
     "/images/family-room.jpg",
   ];
 
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+
   return (
     <section className="section">
       <div className="container">
@@ -40,11 +45,25 @@ function Gallery() {
         <div className="gallery-grid">
           {images.map((img, index) => (
             <div className="gallery-item" key={index}>
-              <img src={img} alt={`Poet's Inn ${index + 1}`} />
+              <img
+                src={img}
+                alt={`Poet's Inn ${index + 1}`}
+                onClick={() => setLightboxIndex(index)}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           ))}
         </div>
       </div>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={images}
+          index={lightboxIndex}
+          setIndex={setLightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
     </section>
   );
 }
