@@ -1,0 +1,121 @@
+.chat-bubble {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c9a227, #f1d27a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.08);
+}
+
+.pulse {
+  animation: pulseAnim 2s infinite;
+}
+
+@keyframes pulseAnim {
+  0% { box-shadow: 0 0 0 0 rgba(201,162,39,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(201,162,39,0); }
+  100% { box-shadow: 0 0 0 0 rgba(201,162,39,0); }
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 105px;
+  left: 25px;
+  width: 370px;
+  height: 520px;
+  background: linear-gradient(145deg, #0e1d19, #122822);
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+  border: 1px solid rgba(201,162,39,0.3);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(30px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.chat-window.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chat-header {
+  padding: 15px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #c9a227, #f1d27a);
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+.chat-message.bot {
+  background: #1f3b35;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.chat-message.user {
+  background: #c9a227;
+  color: #000;
+  align-self: flex-end;
+}
+
+.chat-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.chat-options button {
+  background: transparent;
+  border: 1px solid #c9a227;
+  color: #c9a227;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 13px;
+}
+
+.chat-options button:hover {
+  background: #c9a227;
+  color: #000;
+}
+
+.typing {
+  font-style: italic;
+  opacity: 0.7;
+}

@@ -36,3 +36,76 @@
     transform: rotate(360deg);
   }
 }
+/* ================= BOOKING SECTION ================= */
+
+.booking-section {
+  background: linear-gradient(135deg, #071c17, #0e2b23);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-container {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.booking-title {
+  text-align: center;
+  color: #d4af37;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 20px;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: 2px solid #d4af37;
+}
+
+.booking-form button {
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  background: #d4af37;
+  color: #071c17;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.booking-form button:hover {
+  background: #b9972f;
+  transform: translateY(-2px);
+}
+
+.booking-status {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}

@@ -121,3 +121,95 @@
     display: block;
   }
 }
+/* Booking Button Style */
+.book-btn {
+  background: #c9a227;
+  color: #000 !important;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  margin-left: 10px;
+}
+
+.book-btn:hover {
+  background: #ffffff;
+  color: #000 !important;
+}
+
+.active-link {
+  border-bottom: 2px solid #c9a227;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: rgba(5, 20, 15, 0.6);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(5, 20, 15, 0.95);
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+.active-link {
+  color: #d4af37;
+}
+
+.book-now-btn {
+  background: #d4af37;
+  color: #071c17;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-2px);
+}
+.availability-badge {
+  background: #d4af37;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 20px;
+  white-space: nowrap;
+}

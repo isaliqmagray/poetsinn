@@ -11,12 +11,14 @@ import ReviewsSection from "../components/ReviewsSection";
 import CTASection from "../components/CTASection";
 import EnquirySection from "../components/EnquirySection";
 import MapSection from "../components/MapSection";
+import Booking from "./Booking";
 
 function Home() {
   return (
     <>
       <Hero />
       <AvailabilityBar />
+      <Booking />
       <AboutSection />
       <WhyChooseUs />
       <FeaturesSection />
